@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 180px;
+        height: 50px;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      span {
+        position: absolute;
+        background: #26242e;
+        transition: 0.4s ease;
+      }
+      span:nth-child(1) {
+        bottom: 0;
+        left: 0;
+        width: 3px;
+        height: 50px;
+        transform: translateY(50px);
+      }
+      span:nth-child(2) {
+        bottom: 0;
+        right: 0;
+        width: 3px;
+        height: 50px;
+        transform: translateY(50px);
+      }
+      span:nth-child(3) {
+        bottom: 0;
+        left: 0;
+        width: 90px;
+        height: 3px;
+      }
+      span:nth-child(4) {
+        bottom: 0;
+        right: 0;
+        width: 90px;
+        height: 3px;
+      }
+      button:hover span:nth-child(1),
+      button:hover span:nth-child(2) {
+        transform: translateY(0);
+        transition-delay: 0.1s;
+      }
+      button:hover span:nth-child(3) {
+        transform: translateX(-90px);
+      }
+      button:hover span:nth-child(4) {
+        transform: translateX(90px);
+      }
+    </style>
+  </head>
+  <body>
+    <button>
+      Button
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </body>
+</html>
